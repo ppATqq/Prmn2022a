@@ -1,5 +1,6 @@
 package lecture_06;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Random;
 import java.util.ArrayList;
@@ -21,8 +22,13 @@ public class Exersize6_2 {
         try{
             int index = input.nextInt();
             System.out.println(index + "番目のサイコロの目は" + arrays.get(index));
+
         }catch(IndexOutOfBoundsException e){
             System.out.println("ArrayListの範囲外アクセスを確認しました。");
+            System.out.println("プログラムを終了します。");
+
+        }catch(InputMismatchException e){
+            System.out.println("整数以外の値が入力されました。");
             System.out.println("プログラムを終了します。");
         }
 
